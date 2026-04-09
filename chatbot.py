@@ -1,0 +1,1 @@
+import os\nfrom langchain import OpenAI\n\nclass CompanyBot:\n    def __init__(self):\n        self.llm = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))\n\n    def converse(self, prompt):\n        response = self.llm(prompt)\n        return response
